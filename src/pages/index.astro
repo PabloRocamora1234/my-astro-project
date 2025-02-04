@@ -1,11 +1,16 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Projects from '../components/Projects.astro';
+import SocialIcons from '../components/SocialIcons.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Inicio">
+  <section class="text-center">
+    <img src="/src/public/image.jpg" alt="Pablo Rocamora López" class="rounded-full w-32 h-32 mx-auto border-4 border-green-400 shadow-lg" />
+    <h1 class="text-3xl mt-4 font-bold">Pablo Rocamora López</h1>
+    <p class="text-green-400 text-lg">Front-end Developer</p>
+    <p class="mt-2 max-w-lg mx-auto text-gray-300">Un desarrollador Full Stack especializado en Front-end con sede en Nueva York...</p>
+    <SocialIcons />
+  </section>
+  <Projects />
 </Layout>

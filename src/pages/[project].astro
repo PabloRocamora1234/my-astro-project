@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DetalleProyecto from '../components/DetalleProyecto.astro';
+import { projects } from '../data/projects';
+
+export async function getStaticPaths() {
+  return Object.keys(projects).map(project => ({ params: { project } }));
+}
+
+const { project } = Astro.params;
+const projectData = projects[project];
+---
+
+<Layout title={projectData.title}>
+  <DetalleProyecto {...projectData} />
+</Layout>
