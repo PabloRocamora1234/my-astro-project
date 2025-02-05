@@ -4,30 +4,31 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <section class='text-white p-8 rounded shadow-md w-full max-w-4xl mx-auto'>
-    <h1 class='text-3xl font-bold mb-6'>Contact Me</h1>
-    <p class='mb-4 text-lg'>Hello! I'm Pablo, a programador. Feel free to reach out to me through the form below or via the contact details provided.</p>
-    <div class='mb-8'>
-      <h2 class='text-2xl font-semibold mb-2'>Contact Information</h2>
-      <p class='text-lg'>Email: <a href='mailto:pablorocamoralopez@gmail.com' class='text-blue-500'>pablorocamoralopez@gmail.com</a></p>
-      <p class='text-lg'>Phone: <a href='tel:+34675805436' class='text-blue-500'>+34 675805436</a></p>
-      <p class='text-lg'>LinkedIn: <a href='https://www.linkedin.com/in/pablorocamora' class='text-blue-500'>linkedin.com/in/pablorocamora</a></p>
-    </div>
-    <form class='bg-[#002b5c] p-4 rounded-lg shadow-lg'>
-      <h2 class='text-2xl font-semibold mb-4'>Contact Form</h2>
-      <div class='mb-4'>
-        <label for='name' class='block text-gray-300 text-lg'>Name</label>
-        <input type='text' id='name' name='name' class='w-full p-2 border border-gray-300 rounded mt-1' required />
+  <section class="bg-white dark:bg-gray-900 text-black dark:text-white p-8 rounded shadow-md w-full max-w-3xl mx-auto transition-colors duration-300">
+    <h1 class="text-3xl font-bold mb-6">Contacto</h1>
+    <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">
+      ¿Tienes alguna pregunta o quieres trabajar conmigo? Completa el formulario y te responderé lo antes posible.
+    </p>
+    
+    <form class="space-y-6">
+      <div>
+        <label class="block text-gray-800 dark:text-gray-200 mb-2">Nombre</label>
+        <input type="text" class="w-full p-3 rounded bg-gray-100 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-green-400" placeholder="Tu nombre">
       </div>
-      <div class='mb-4'>
-        <label for='email' class='block text-gray-300 text-lg'>Email</label>
-        <input type='email' id='email' name='email' class='w-full p-2 border border-gray-300 rounded mt-1' required />
+      
+      <div>
+        <label class="block text-gray-800 dark:text-gray-200 mb-2">Correo Electrónico</label>
+        <input type="email" class="w-full p-3 rounded bg-gray-100 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-green-400" placeholder="tucorreo@example.com">
       </div>
-      <div class='mb-4'>
-        <label for='message' class='block text-gray-300 text-lg'>Message</label>
-        <textarea id='message' name='message' class='w-full p-2 border border-gray-300 rounded mt-1' rows='5' required></textarea>
+      
+      <div>
+        <label class="block text-gray-800 dark:text-gray-200 mb-2">Mensaje</label>
+        <textarea class="w-full p-3 rounded bg-gray-100 dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-green-400" placeholder="Escribe tu mensaje aquí"></textarea>
       </div>
-      <button type='submit' class='bg-green-400 text-white p-2 rounded hover:bg-green-300 transition'>Send</button>
+
+      <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition">
+        Enviar Mensaje
+      </button>
     </form>
   </section>
 </Layout>

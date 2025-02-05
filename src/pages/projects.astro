@@ -1,23 +1,45 @@
 ---
 title: 'Projects'
 import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  { 
+    title: 'Desarrollo de Software y Teletrabajo', 
+    description: 'Un proyecto que explora las mejores prácticas y herramientas para el desarrollo de software en un entorno de teletrabajo.',
+    link: '/desarrollo-software-teletrabajo' 
+  },
+  { 
+    title: 'Automatización de Tareas con Scripts', 
+    description: 'Este proyecto se centra en la creación de scripts para automatizar tareas repetitivas con Python y Bash.', 
+    link: '/automatizacion-tareas-scripts' 
+  },
+  { 
+    title: 'Despliegue de Aplicaciones en la Nube', 
+    description: 'Aborda el despliegue de aplicaciones web en plataformas de nube como AWS y Azure.', 
+    link: '/despliegue-aplicaciones-nube' 
+  },
+  { 
+    title: 'Seguridad en Aplicaciones Web', 
+    description: 'Mejores prácticas para proteger aplicaciones contra ataques como XSS, CSRF y SQL Injection.', 
+    link: '/seguridad' 
+  }
+];
 ---
 
 <Layout>
-  <section class='text-white p-8 rounded shadow-md w-full max-w-4xl mx-auto'>
-    <h1 class='text-3xl font-bold mb-6'>Projects</h1>
-    <p class='mb-4 text-lg'>Here are some of the projects I have worked on. Click on the links to learn more about each project.</p>
-    <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
-      {[
-        { title: 'Desarrollo de Software y Teletrabajo', description: 'Un proyecto que explora las mejores prácticas y herramientas para el desarrollo de software en un entorno de teletrabajo. Incluye el uso de plataformas de colaboración, gestión de proyectos y metodologías ágiles.', link: '/desarrollo-software-teletrabajo' },
-        { title: 'Automatización de Tareas con Scripts', description: 'Este proyecto se centra en la creación de scripts para automatizar tareas repetitivas, mejorando la eficiencia y reduciendo el error humano. Utiliza lenguajes como Python y Bash.', link: '/automatizacion-tareas-scripts' },
-        { title: 'Despliegue de Aplicaciones en la Nube', description: 'Un proyecto que aborda el despliegue de aplicaciones web en plataformas de nube como AWS y Azure. Incluye la configuración de servidores, bases de datos y servicios de escalabilidad.', link: '/despliegue-aplicaciones-nube' },
-        { title: 'Seguridad', description: 'Implementación de Seguridad en Aplicaciones Web: Este proyecto se enfoca en las mejores prácticas para asegurar aplicaciones web, incluyendo la protección contra ataques comunes como XSS, CSRF y SQL Injection.', link: '/seguridad' },
-      ].map(project => (
-        <div class='bg-[#002b5c] p-4 rounded-lg shadow-lg'>
-          <h3 class='text-xl font-semibold mb-2'>{project.title}</h3>
-          <p class='text-gray-300 mb-4'>{project.description}</p>
-          <a href={project.link} class='text-green-400 hover:text-green-300 transition'>Seguir leyendo -></a>
+  <section class="bg-white dark:bg-gray-900 text-black dark:text-white p-8 rounded shadow-md w-full max-w-4xl mx-auto transition-colors duration-300">
+    <h1 class="text-3xl font-bold mb-6">Projects</h1>
+    <p class="mb-4 text-lg text-gray-700 dark:text-gray-300">
+      Aquí hay algunos proyectos en los que he trabajado. Haz clic en los enlaces para conocer más.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {projects.map(project => (
+        <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-lg transition-colors duration-300">
+          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{project.title}</h3>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+          <a href={project.link} class="text-green-500 dark:text-green-400 hover:text-green-400 dark:hover:text-green-300 transition">
+            Seguir leyendo ->
+          </a>
         </div>
       ))}
     </div>
